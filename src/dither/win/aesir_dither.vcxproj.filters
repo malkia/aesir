@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ResourceCompile Include="aesir_dither_pipl.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\aesir_dither.h" />
+    <ClInclude Include="..\aesir_dither_strings.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\aesir_dither.cpp" />
+    <ClCompile Include="..\aesir_dither_strings.cpp" />
+    <ClCompile Include="..\..\..\sdk\Util\AEFX_ArbParseHelper.c">
+      <Filter>sdk\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\sdk\Util\AEFX_SuiteHelper.c">
+      <Filter>sdk\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\sdk\Util\AEGP_SuiteHandler.cpp">
+      <Filter>sdk\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\sdk\Util\AEGP_Utils.cpp">
+      <Filter>sdk\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\sdk\Util\MissingSuiteError.cpp">
+      <Filter>sdk\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\sdk\Util\Smart_Utils.cpp">
+      <Filter>sdk\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\sdk\Headers\SP\SPEDebug.c">
+      <Filter>sdk\Headers\SP</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\aesir_dither_pipl.r" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="sdk">
+      <UniqueIdentifier>{239e1d20-a5fc-4938-9e38-9a5557b20591}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sdk\Util">
+      <UniqueIdentifier>{a2973032-e5fe-4a2d-953e-aea3f4f424ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sdk\Headers">
+      <UniqueIdentifier>{0e481a62-cb1e-474e-ba06-683adcdc0ef8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sdk\Headers\SP">
+      <UniqueIdentifier>{38f9041c-5c09-4578-b346-fa69b68b5f59}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
