@@ -60,6 +60,9 @@ enum {
 
 typedef struct GainInfo{
 	PF_FpLong	gainF;
+
+	u_long vinylizerTurns;
+	u_long vinylizerSegmentsPerTurn;
 } GainInfo, *GainInfoP, **GainInfoH;
 
 extern "C" {

@@ -13,11 +13,11 @@ resource 'PiPL' (16000) {
 		},
 		/* [2] */
 		Name {
-			"dither"
+			"name_dither"
 		},
 		/* [3] */
 		Category {
-			"aesir"
+			"category_aesir"
 		},
 #ifdef AE_OS_WIN
 	#ifdef AE_PROC_INTELx64

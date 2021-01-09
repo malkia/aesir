@@ -6,6 +6,7 @@
   <ItemGroup>
     <ClInclude Include="..\aesir_dither.h" />
     <ClInclude Include="..\aesir_dither_strings.h" />
+    <ClInclude Include="..\aesir_mod.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\aesir_dither.cpp" />
@@ -31,6 +32,7 @@
     <ClCompile Include="..\..\..\sdk\Headers\SP\SPEDebug.c">
       <Filter>sdk\Headers\SP</Filter>
     </ClCompile>
+    <ClCompile Include="..\aesir_mod.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="..\aesir_dither_pipl.r" />
