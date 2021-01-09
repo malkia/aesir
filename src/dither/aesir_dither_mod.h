@@ -3,14 +3,20 @@
 // A common header file to be used by all mods
 #include "aesir_mod.h"
 
+#include <AE_Effect.h>
+
+struct aesir_dither_mod_rgb
+{
+    
+};
+
 // Exports functions used by the aesir dither plugin
 // That may need to be tweaked, and the .dll they are contained in reloaded
 // Ideally, there should be no state, and everything is driven through a
 // structure with function pointers, returned by an exported DLL function.
 
 #define AESIR_DITHER_MOD_FUNC_LIST_(_) \
-    _(int, sum, (int a, int b)) \
-    _(int, avg, (int a, int b))
+	_(PF_Err, pixel8, (void* refcon, A_long xL, A_long yL, PF_Pixel8* inP, PF_Pixel8*outP))
 
 struct aesir_dither_mod_functions
 {

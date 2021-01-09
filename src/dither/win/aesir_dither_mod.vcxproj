@@ -105,5 +105,8 @@
     <ClCompile Include="..\..\..\sdk\Util\Smart_Utils.cpp" />
     <ClCompile Include="..\aesir_dither_mod.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\aesir_dither_mod.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
 </Project>

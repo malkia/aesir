@@ -38,4 +38,7 @@
       <UniqueIdentifier>{38f9041c-5c09-4578-b346-fa69b68b5f59}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\aesir_dither_mod.h" />
+  </ItemGroup>
 </Project>

@@ -4,7 +4,7 @@
 
 #include "aesir_dither_mod.h"
 
-static void* dither_mod_functions = nullptr;
+static aesir_dither_mod_functions* dither_mod_functions = nullptr;
 
 static PF_Err 
 About (	
@@ -294,7 +294,7 @@ Render (
 												&params[SKELETON_INPUT]->u.ld,	// src 
 												NULL,							// area - null for all pixels
 												(void*)&giP,					// refcon - your custom data pointer
-												MySimpleGainFunc8,				// pixel function pointer
+												dither_mod_functions ? dither_mod_functions->pixel8 : MySimpleGainFunc8,				// pixel function pointer
 												output));	
 	}
 
@@ -362,8 +362,6 @@ EffectMain(
 		printf( "AESIR_DITHER: New functions %p\n", functions );
 		dither_mod_functions = functions;
 	}
-
-	printf("AESIR_DITHER: Loaded... %d, functions=%p, sum(13,15)=%d\n", cnt++, functions, functions ? functions->sum(13, 15) : -1);
 
 	try {
 		switch (cmd) {
