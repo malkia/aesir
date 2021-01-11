@@ -9,5 +9,6 @@
     <LocalDebuggerCommand>C:\Program Files\Adobe\Adobe After Effects 2020\Support Files\AfterFX.com</LocalDebuggerCommand>
     <LocalDebuggerWorkingDirectory>C:\Program Files\Adobe\Adobe After Effects 2020\</LocalDebuggerWorkingDirectory>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+    <LocalDebuggerCommandArguments>-m</LocalDebuggerCommandArguments>
   </PropertyGroup>
 </Project>
