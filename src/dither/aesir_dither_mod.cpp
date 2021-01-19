@@ -16,16 +16,16 @@ static PF_Err pixel8(void* refcon, A_long xL, A_long yL, PF_Pixel8* inP, PF_Pixe
 	int dx = xL & 7;
 	int dy = yL & 7;
 	uint32_t vr = (c64dither[dy][dx]+1) * 4 - 1;
-	uint32_t vg = (c64dither[dy][7-dx]+1) * 4 - 1;
-	uint32_t vb = (c64dither[7-dy][dx]+1) * 4 - 1;
+	uint32_t vg = vr;//(c64dither[dy][7-dx]+1) * 4 - 1;
+	uint32_t vb = vr;//(c64dither[7-dy][dx]+1) * 4 - 1;
 	uint32_t r = inP->red;
 	uint32_t g = inP->green;
 	uint32_t b = inP->blue;
 	outP->alpha = inP->alpha;
-	outP->red = ((r*vr) >> 8) | (g<vb?0:0x80);
-	outP->green = ((g*vg) >> 8) | (b<vr?0:0x80);;
-	outP->blue = ((b*vb) >> 8) | (g<vg?0:0x80);;
-	outP->blue = 255;
+	outP->red = ((r*vr) >> 8) |(r<vr?0:0x80);// (g<vb?0:0x80);
+	outP->green = ((g*vg) >> 8) |(g<vg?0:0x80);// (b<vr?0:0x80);;
+	outP->blue = ((b*vb) >> 8) |(b<vb?0:0x80);// (r<vg?0:0x80);;
+	//outP->green = 255;
 	return PF_Err_NONE;
 }
 

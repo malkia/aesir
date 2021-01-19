@@ -183,7 +183,7 @@ EffectMain(
 		notifyForceRender.fetch_add( 1 );
 	}
 
-	printf("AESIR_DITHER: Called for %d, tid=%d\n", cmd, GetCurrentThreadId() );
+	//printf("AESIR_DITHER: Called for %d, tid=%d\n", cmd, GetCurrentThreadId() );
 
 	try {
 		switch (cmd) {

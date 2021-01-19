@@ -5,11 +5,6 @@
 
 #include <AE_Effect.h>
 
-struct aesir_dither_mod_rgb
-{
-    
-};
-
 // Exports functions used by the aesir dither plugin
 // That may need to be tweaked, and the .dll they are contained in reloaded
 // Ideally, there should be no state, and everything is driven through a
